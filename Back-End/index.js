@@ -7,9 +7,6 @@ const cookieParser = require('cookie-parser')
 const {success,error} = require('consola')
 const {connect} = require("mongoose");
 const app  = exp();
-//views
-
-
 const  { engine } = require('express-handlebars') ;
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
@@ -20,9 +17,9 @@ app.use(exp.static("files"));
 // parse application/json
 app.use(expressValidator());
 app.use(bp.json());
+
 app.get('/', (req, res) => {
     res.render('home');
-   
 });
 
 
@@ -50,25 +47,11 @@ app.use(cookieParser());
 
 
 
-//User Router Middleware
 app.use("/api/users",require("./routes/users"));
-
-
-
-app.use("/api/hotel",require("./routes/hotels"));
-
+app.use("/api/admin",require("./routes/admins"));
 app.use("/api/client",require("./routes/clients"));
-
-
-
-
-/* zakaria */
-
-app.use("/api/filter",require("./routes/booking"));
-
-
-
-app.use("/api/booking",require("./routes/booking"));
+// app.use("/api/filter",require("./routes/booking"));
+app.use("/api/livreur",require("./routes/livreur"));
  
 
 
