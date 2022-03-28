@@ -50,7 +50,6 @@ app.use(cookieParser());
 app.use("/api/users",require("./routes/users"));
 app.use("/api/admin",require("./routes/admins"));
 app.use("/api/client",require("./routes/clients"));
-// app.use("/api/filter",require("./routes/booking"));
 app.use("/api/livreur",require("./routes/livreur"));
  
 
