@@ -6,16 +6,15 @@ const {
   checkRole
 } = require("../controllers/Auth");
 const {
-  creatHotel,
-  getHotels,
-  getHotel,
-  updateHotel,
+  creatRepas,
+  getRepas,
+  updateRepas,
   getHoteletoiles,
-  deletHotel,
+  deletRepas,
   getHotelbycity,
   getHotelbycountry,
   getHotelbyName
-} = require("../controllers/hotelController");
+} = require("../controllers/repasController");
 
 const {
   creatHotelImages,
@@ -26,28 +25,19 @@ const {
 
 const upload = require('../middlewares/upload')
 
-router.post("/add" , upload.single('image_cover'),  creatHotel);
+router.post("/add" , upload.single('image_cover'),   creatRepas);
 router.post("/upload", upload.single('file'),  creatHotelImages);
 
 router.get("/imageByHotel/:HotelId",  getImagesByHotel);
 router.post("/upload", upload.array('image',8), OwnercreatHotelImages);
 
-router.get("/",/*userAuth,  checkRole(['admin']),*/ getHotels);
+router.get("/",/*userAuth,  checkRole(['admin']),*/ getRepas);
 
-router.get("/etoile/:hoteletoile", async(req,res)=>{
-  await getHoteletoiles(req,res);
-});
-router.get("/:hotelId",  getHotel);
-router.patch("/:hotelId",  updateHotel);
-router.delete("/:hotelId",  deletHotel);
-router.get("/city/:city", getHotelbycity);
-router.get("/country/:country", getHotelbycountry);
-router.get("/name/:name", getHotelbycountry);
-// router.get("/city/:city", async(req,res)=>{
-  //   await getHotelbycity(req,res);
-  // });
-  
-  // router.get("/city/:city", getHotelbycity);
+
+router.patch("/:repasId",  updateRepas);
+router.delete("/:repasId",  deletRepas);
+
+
 
 
 module.exports = router;

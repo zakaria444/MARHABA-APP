@@ -51,7 +51,7 @@ const userLogin = async (userCreds,role,res)=>{
     },
     SECRET ,
     {
-      expiresIn:"7 days"
+      expiresIn:"1 days"
     }
      
      
