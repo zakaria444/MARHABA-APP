@@ -17,6 +17,10 @@
 - 📫 How to reach me **elismailizakariae@gmail.com**
 
 - ⚡ Fun fact **I play games and go to the GYM very often.**
+## 🚀 Context of the project:
+
+<h3>As part of its development in Morocco, the mar7aba restaurant wishes to facilitate delivery management with partners by creating a cross-platform application (web/mobile/desktop)...</h3>
+
 
 ## 🚀 Languages and Tools:
 
