@@ -5,7 +5,6 @@ const {
     bookingproprietair,
     updatebooking,
     getbooking,
-    getdate
   } = require("../controllers/BookingController");
 
 
@@ -22,12 +21,8 @@ router.post('/updatebooking/:bookingid', async(req,res)=>{
     await updatebooking(req,res);
 });
 
-/*                Filter Par Date                      */
 
 
-router.get('/filterdate', async(req,res)=>{
-  await   getdate(req,res);
-});
 
 
 
