@@ -1,0 +1,261 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;378&family=Source+Sans+Pro:ital@1&family=Zen+Antique&display=swap');
+*{
+  font-family: 'Red Hat Mono', monospace;
+}
+:root{
+  --First-color:#161624;
+  --Second-color:#f2363c;
+  --third-color:#573b8a;
+} 
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://wallpapercave.com/wp/wp2757874.gif);
+  background-size:cover ;
+  background-position:right;
+}
+.main{
+  width: 350px;
+  background-color: #161624aa;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+#chk{
+  display: none;
+}
+.signup{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.user-box {
+  position: relative;
+  width :60%;
+  margin:0px auto;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 10px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+  background: #6d44b8;
+}
+.login{
+  height: 470px;
+  background: #eee;
+  border-radius: 60% / 10%;
+  transform: translateY(-180px);
+  transition: .8s ease-in-out;
+}
+#chk:checked ~ .login{
+  transform: translateY(-530px);
+}
+#chk:checked ~ .login label{
+  transform: scale(1);
+}
+#chk:checked ~ .signup .sig{
+  transform: scale(.6);
+  margin-top:10px;
+}
+.user-box label {
+  position: absolute;
+  top:0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.user-box input {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 14px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f2363c;
+  font-size: 12px;
+  font-weight:bold;
+}
+label[for="chk"] {
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+} 
+.sig{
+  color:#fff;
+	margin: 40px;
+}
+.log{
+	margin: 80px;
+}
+.login label , .login input{
+  color:#573b8a;
+}
+.login input{
+  border-color:#573b8a;
+}
+
+
+/* radio-nput css */
+
+
+
+.radio_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cecece;
+    width: 200px;
+    height: 30px;
+    border-radius: 9999px;
+    box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+}
+html,
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type="radio"] {
+    appearance: none;
+    display: none;
+}
+
+.radio  {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    border-radius: 9999px;
+    overflow: hidden;
+    transition: linear 0.3s;
+    color: #6e6e6edd;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #573b8a;
+    color: #f1f3f5;
+    font-weight: 900;
+    transition: 0.3s;
+}
+ </style>
+    <title>Athentification User</title>
+</head>
+<body>
+    
+ 
+				
+	<div class="main">  	
+   
+		<input type="checkbox" id="chk">
+
+			<div class="signup">
+				<form action="/api/users/register-user" method="post">
+					<label for="chk" class="sig">Sign up</label>
+   <div class="user-box">
+          <input type="text" name="name" title="Enter Username" required>
+           <label>FirstName</label>
+     </div>			
+    <div class="user-box">
+      <input type="text" name="username" title="Enter Username" required>
+      <label>LastName</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="email"title="Enter email" required>
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="password"  name="password"title="Enter password" required>
+      <label>Password</label>
+    </div>
+<!--           
+    <div class="container">
+        <div class="radio_container">
+            <input type="radio" value="user" name="radio" id="one"checked>
+            <label class="radio" for="one">Client</label>
+            <input type="radio" value="owner-user" name="radio" id="two">
+            <label  class="radio" for="two">Owner</label>
+            
+        </div>
+    </div> -->
+					<button type="submit">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form action="/api/users/login-user" method="post">
+					<label for="chk" class="log" >Login</label>
+	
+          				
+
+    <div class="user-box">
+
+      <input type="text" name="username" title="Enter Username" required>
+
+      <label>Username</label>
+
+    </div>				
+
+    <div class="user-box">
+
+      <input type="password" name="password" title="Enter password" required>
+
+      <label>Password</label>
+
+    </div>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+	</div>
+
+  
+</body>
+</html> -->
