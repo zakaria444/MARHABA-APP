@@ -19,7 +19,7 @@
 - ⚡ Fun fact **I play games and go to the GYM very often.**
 ## 🚀 Context of the project:
 
-<h1>Dans le cadre de son développement au Maroc, le restaurant mar7aba souhaite faciliter la gestion de livraison avec les partenaires par la création d'une Application cross plateforme (web/mobile/desktop).</h1>
+<h3>As part of its development in Morocco, the mar7aba restaurant wishes to facilitate delivery management with partners by creating a cross-platform application (web/mobile/desktop)...</h3>
 
 
 ## 🚀 Languages and Tools:
