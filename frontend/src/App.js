@@ -4,6 +4,9 @@ import {Routes,Route} from "react-router-dom"
 import Signin from './Authenticated/Signin';
 import Signup from './Authenticated/Signup';
 
+import Home from './Home/Home';
+
+
 
 function App() {
   return (
@@ -11,7 +14,9 @@ function App() {
 <Routes>
   <Route path='/signin' element={<Signin/>} />
   <Route path='/signup' element={<Signup/>} />
-
+</Routes>
+<Routes>
+  <Route path='/' element={<Home/>} />
 </Routes>
 
     </div>
