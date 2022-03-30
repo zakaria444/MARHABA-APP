@@ -49,7 +49,7 @@ app.use(cookieParser());
 
 app.use("/api/users",require("./routes/users"));
 app.use("/api/admin",require("./routes/admins"));
-app.use("/api/client",require("./routes/clients"));
+app.use("/api/command",require("./routes/command"));
 app.use("/api/livreur",require("./routes/livreur"));
  
 

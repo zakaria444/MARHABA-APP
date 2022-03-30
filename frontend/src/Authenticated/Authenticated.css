@@ -7,6 +7,11 @@ body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }
+#signup{
+display: flex;
+align-items: center;
+justify-content: center;
+}
 .wave {
   position: fixed;
   bottom: 0;
