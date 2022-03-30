@@ -2,23 +2,22 @@ const router = require("express").Router();
 
 
 const {
-    bookingproprietair,
-    updatebooking,
-    getbooking,
-  } = require("../controllers/BookingController");
+  order_delivery,
+  show_command_repas,
+  show_command
+  } = require("../controllers/Livreur/Command_livreur");
 
 
 
-  router.post('/addbooking', async(req,res)=>{
-    await bookingproprietair(req,res);
+  router.post('/order_delivery', async(req,res)=>{
+    await order_delivery(req,res);
 });
 
-router.get('/getbooking', async(req,res)=>{
-  await   getbooking(req,res);
+router.get('/show_command_repas/:commandId', async(req,res)=>{
+  await   show_command_repas(req,res);
 });
-
-router.post('/updatebooking/:bookingid', async(req,res)=>{
-    await updatebooking(req,res);
+router.get('/show_command', async(req,res)=>{
+  await   show_command(req,res);
 });
 
 

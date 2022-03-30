@@ -12,16 +12,15 @@ const AddCommand = async (req, res) => {
     });
 
     const saveCommand = await newCommand.save();
-    // res.status(201).json({ success: true, data: saveCommand })
-
     if (saveCommand) {
       const products = req.body.products;
       let total = 0;
       products.map(async (reapas) => {
+        // console.log(reapas.reapas_id);
         let subTotal = reapas.prix * reapas.quntity;
         const newCommandrepas = new CommandRepas({
           command_id: saveCommand._id,
-          repas_id: reapas.reapas_id,
+          repas_id: reapas.repas_id,
           prix: reapas.prix,
           quntity: reapas.quntity,
           total: subTotal,
