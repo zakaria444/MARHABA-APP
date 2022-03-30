@@ -1,6 +1,8 @@
-const {Schema, model}= require('mongoose');
-const UserSchema = new Schema (
-    {
+
+const mongoose = require("mongoose");
+const UserSchema = mongoose.model(
+    "User",
+    new mongoose.Schema({
         email:{
             type:String,
             required:true
@@ -24,7 +26,11 @@ const UserSchema = new Schema (
             enum:["pending","accept"]      
           },
       
-    },
    
+        
+    },
+        { timestamps: true })
 );
-module.exports = model("users",UserSchema);
+
+module.exports = UserSchema;
+

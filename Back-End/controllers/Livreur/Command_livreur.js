@@ -17,9 +17,11 @@ const show_command_repas = async (req, res) => {
   
       try {
         const command = await Command.find().populate('user_id');
+    
         res.status(200).json({success: true , data: command})
     
       }catch(error){
+      console.log(error);
         res.status(404).json({success: false , data: [], error: error})
       }
     }
