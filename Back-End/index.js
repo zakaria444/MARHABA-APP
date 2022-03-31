@@ -1,6 +1,7 @@
 const cors = require("cors");
 const bp = require("body-parser");
 const exp = require("express");
+const morgan=require('morgan')
 const expressValidator = require('express-validator');
 const cookieParser = require('cookie-parser')
 
@@ -17,6 +18,7 @@ app.use(exp.static("files"));
 // parse application/json
 app.use(expressValidator());
 app.use(bp.json());
+app.use(morgan('tiny'))
 
 app.get('/', (req, res) => {
     res.render('home');

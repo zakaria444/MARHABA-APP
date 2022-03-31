@@ -107,7 +107,7 @@ const status_command = async (req, res) => {
     );
     res.status(200).json({ success: true, data: command_id });
   } else {
-    res.status(404).json({ success: true, data: "error" });
+    res.status(200).json({ success: true, data:command_id  });
   }
 };
 
