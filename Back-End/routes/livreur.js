@@ -9,7 +9,7 @@ const {
 
 
 
-  router.post('/order_delivery', async(req,res)=>{
+  router.post('/order_delivery/:command_id', async(req,res)=>{
     await order_delivery(req,res);
 });
 

@@ -22,6 +22,7 @@ const CommandSchema = mongoose.model(
             },
             livreur_id: {
                 type: mongoose.Schema.Types.ObjectId,
+                default:null,
                 ref: 'User'
             },
         

@@ -13,6 +13,11 @@ const show_command_repas = async (req, res) => {
     }
   }
 
+
+
+
+  
+
   const show_command = async (req, res) => {
   
       try {
@@ -25,9 +30,43 @@ const show_command_repas = async (req, res) => {
         res.status(404).json({success: false , data: [], error: error})
       }
     }
+
+
+
+
+
+
+    const order_delivery = async (req, res) => {
+      const id_command= req.params.command_id
+      const id_livreur=req.body.livreur_id
+
+        try {
+             await Command.updateOne({ _id: id_command  }, {
+            $set: {
+              livreur_id: id_livreur,
+                  }
+                   })
+                 const command_id=  await Command.find({ _id: id_command  })
+        
+              res.status(200).json({success: true , data: command_id})
+      
+        }catch(error){
+        console.log(error);
+          res.status(404).json({success: false , data: [], error: error})
+        }
+      }
+    
+
+
+
+
+
+
+
   module.exports = {
     show_command_repas,
     show_command,
+    order_delivery,
 
  
     
