@@ -1,5 +1,7 @@
 const CommandRepas = require("../../models/Command-reapas");
 const Command = require("../../models/Command");
+const nodemailer =require('nodemailer')
+
 
 const show_command_repas = async (req, res) => {
   const Idcommand = req.params.commandId;
@@ -105,7 +107,11 @@ const status_command = async (req, res) => {
       }
     );
     res.status(200).json({ success: true, data: command_id });
-  } else {
+  }else if (command_id.status == "delivery") {
+    console.log(command_id.status , 'status');
+   
+    
+  }else {
     res.status(200).json({ success: true, data:command_id  });
   }
 };
