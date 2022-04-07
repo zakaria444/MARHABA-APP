@@ -48,7 +48,6 @@ function Signin() {
         </div>
        
         <input type="submit" className="btn"  defaultValue="Login" value={"SIGN UP"}/>
-        <a className="btn" id='signup' href='/signin'>SIGN in</a>
       </form>
       
     </div>
