@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #008374;
   }
   
   li, a, button {
@@ -20,6 +19,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+    background-color: #2FD69A;
+    height: 15px;
+
     
   }
   

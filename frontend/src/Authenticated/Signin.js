@@ -6,7 +6,7 @@ function Signin() {
     <div className="App">
    <div>
   <img className="wave" src="https://i.postimg.cc/sDG8zyXM/wave.png"  alt=''/>
-  <div className="container">
+  <div className="containerr">
     <div className="img">
       <img src="http://localhost:3000/img/Capture_prev_ui.png"alt='' />
     </div>

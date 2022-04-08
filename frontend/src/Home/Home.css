@@ -2,8 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #008374;
+  height: 530px;
+  border: solid 1px;
+  background-color: #2FD69A;
+  
 }
+.tout{
+
+  overflow-y:scroll; 
+  position:relative;
+  
+  }
 container{
   display: flex;
   align-items: center;
@@ -22,6 +31,7 @@ button
   border: 5px solid #f6bd70;
   border-radius: 5rem 5rem 1rem 1rem;
   animation: bun-lettuce-coming 1.5s;
+  background-color: #FBBD38;
 }
 .tomato
 {
@@ -30,6 +40,8 @@ button
   border: 2px solid #ff79da;
   border-radius: 2rem;
   animation: content-coming 1.5s;
+
+  background-color: #F9761B;
 }
 .lettuce
 {
@@ -38,6 +50,7 @@ button
   border: 2px solid #b6f06a;
   border-radius: 2rem;
   animation: bun-lettuce-coming 1.5s;
+  background-color: #97CE59;
 }
 .steak
 {
@@ -46,6 +59,7 @@ button
   border: 2px solid #9356dc;
   border-radius: 3rem;
   animation: content-coming 1.5s;
+  background-color: #FEEA85;
 }
 .bottom-bun
 {
@@ -53,6 +67,8 @@ button
   border: 5px solid #f6bd70;
   border-radius: 1rem 1rem 5rem 5rem;
   animation: bun-lettuce-coming 1.5s;
+  background-color: #FBBD38;
+
 }
 @keyframes bun-lettuce-coming {
     0% {
@@ -109,4 +125,8 @@ button
 .para-home{
   font-size: 50px;
   font-weight: bold;
-  font-family: cursive;}
+  font-family: cursive;
+  text-align: center;
+}
+
+
