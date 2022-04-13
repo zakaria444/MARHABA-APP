@@ -1,51 +1,55 @@
-import  './admin.css'
+import "./admin.css";
 
-import React , {useEffect} from 'react'
+import React, { useEffect } from "react";
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 
-import { setRepas } from '../redux/actions/repasActions'
+import { setRepas } from "../redux/actions/repasActions";
 
-import axios from 'axios'
+import axios from "axios";
 
-import  Repas  from './Repas'
-
+import Repas from "./Repas";
 
 function Dashbordadmin() {
+  const AllReapas = useSelector((state) => state);
 
-    const AllReapas =useSelector((state) => state);
+  console.log("Repas Reduser", AllReapas);
 
-    console.log('Repas Reduser',AllReapas);
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const url = "http://localhost:80/api/admin";
 
-    const url ="http://localhost:80/api/admin";
+  const repas = async () => {
+    const showrepas = await axios
+      .get(url)
+      .catch((err) => {
+        console.log("error", err);
+      });
 
-    const repas = async ()=>{
+      if (showrepas) {
+        dispatch(setRepas(showrepas.data.data));
+        console.log('showrepas api : ' , showrepas);
+      }
+  };
 
-    const showrepas = await axios.get(url)
-
-    .catch((err) => {
-
-     console.log('error',err);
-
-    });
-
-    dispatch(setRepas(showrepas.data.data));
-};
-
-    useEffect(()=>{
-
-    repas()
-
-    },[]);
+  useEffect(() => {
+    repas();
+  }, []);
 
   return (
-   <div className='dashboradmin'>
-       <Repas/>
-<h1>Dashbordadmin</h1>
-</div>
-
+    <div className="dashboradmin">
+      <div>
+        <div>
+          <h1>Dashbordadmin</h1>
+        </div>
+        <div>
+          <h1>Dashbordadmin</h1>
+        </div>
+      </div>
+      <div id="repas_card">
+        <Repas />
+      </div>
+    </div>
   );
 }
 
