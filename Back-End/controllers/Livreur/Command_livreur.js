@@ -108,6 +108,32 @@ const status_command = async (req, res) => {
     );
     res.status(200).json({ success: true, data: command_id });
   }else if (command_id.status == "delivery") {
+
+    let transporter = nodemailer.createTransport({
+      service:"gmail",
+      auth:{
+        user:"",
+        pass: "",
+
+      },
+      tls :{
+        rejectUnauthorized : false
+      }
+    });
+    let mailOptions={
+      from : "" ,
+      to : "",
+      subject : "test ",
+      text : "marhaba app testinge ",
+    };
+    transporter.sendMail(mailOptions, function(err,success){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("email send success");
+      }
+    })
+
     console.log(command_id.status , 'status');
    
     
