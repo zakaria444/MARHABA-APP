@@ -14,6 +14,19 @@ const getRepas = async (req, res) => {
 }
 
 
+const getRepasById = async (req, res) => {
+  const idrepas=req.params.repasId;
+  console.log(idrepas);
+  try {
+    const repasbyid = await Repas.findOne({_id:idrepas});
+    res.status(200).json({success: true , data: repasbyid})
+  }catch(error){
+    res.status(404).json({success: false , data: [], error: error})
+  }
+
+}
+
+
 
 const creatRepas = async (req, res) => {
 
@@ -97,6 +110,7 @@ const deletRepas = async (req, res) => {
 module.exports = {
   creatRepas,
   getRepas,
+  getRepasById,
   updateRepas,
   deletRepas,
 };
