@@ -3,11 +3,18 @@ const Repas = require("../models/Repas")
 const getRepas = async (req, res) => {
   try {
     const repas = await Repas.find()
+
     res.status(200).json({ success: true, data: repas })
+
   } catch (error) {
+
     res.status(409).json({ success: false, data: [], error: error })
   }
+
 }
+
+
+
 const creatRepas = async (req, res) => {
 
   console.log('request',req.body);
@@ -25,6 +32,7 @@ const creatRepas = async (req, res) => {
     })
     
       if (req.file) {
+
         newRepas.image_cover = req.file.originalname
     }
   
@@ -42,11 +50,11 @@ const creatRepas = async (req, res) => {
 }
 
 const updateRepas = async (req, res) => {
+
   const repasId = req.params.repasId
   const { name } = req.body
   const { description } = req.body
   const { prix } = req.body
-
 
   try {
     const updatedRepasData = await Repas.updateOne({ _id: repasId }, {
@@ -55,12 +63,20 @@ const updateRepas = async (req, res) => {
         description: description,
         prix: prix,
       }
+
     })
+
     res.status(201).json({ success: true, data: updatedRepasData })
+
   } catch (error) {
+
     res.status(409).json({ success: false, data: [], error: error })
+
   }
 }
+
+
+
 
 const deletRepas = async (req, res) => {
   const repasId = req.params.repasId
