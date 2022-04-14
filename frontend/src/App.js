@@ -12,6 +12,8 @@ import Home from './Home/Home';
 
 import Dashbordadmin from './Admin/Dashbordadmin';
 
+import RepasDetail from './Admin/RepasDetail';
+
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
       <Routes>
 
       <Route path='/dashbordadmin' element={<Dashbordadmin/>} />
+      <Route path='/repasdetail/:repasId' element={<RepasDetail/>} />
+
 
       </Routes>
 

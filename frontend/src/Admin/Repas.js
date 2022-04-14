@@ -24,7 +24,7 @@ const Repas = () => {
     console.log(image_cover);
     return (
       <div className="" id="cards" key={_id}>
-        <Link to={`/product/`}>
+        <Link to={`/repasdetail/${_id}`}>
           <div className="ui link cards">
             <div className="card">
               <div className="image">
