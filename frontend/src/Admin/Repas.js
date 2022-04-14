@@ -17,7 +17,6 @@ const Repas = () => {
       </div>
     );
   }
-  // console.log("im hetete", repas);
 
   const renderList = repas.map((repa) => {
     const { _id, name, image_cover, prix, description } = repa;
