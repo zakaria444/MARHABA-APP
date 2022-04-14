@@ -16,7 +16,7 @@
    display: grid;
    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
    gap: 10px;
-   width:40%;
+   width:50%;
    
 }
 .image_repas{
@@ -43,7 +43,7 @@
     overflow: hidden;
     border-radius: 40px;
     border: none;
-    margin-left: 120px;
+    margin-left: 80px;
     height: 65px;
     margin-bottom: 10px;
 
