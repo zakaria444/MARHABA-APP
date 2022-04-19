@@ -2,23 +2,43 @@ import './Authenticated.css';
 
 import React, { useState } from 'react'
 
-import { connect } from "react-redux"
+import Axios from 'axios';
+
+// import { connect } from "react-redux"
+
+// import { RegisterAuthAction } from "../redux/actions/AuthAction";
 
 
 
 
 
-function Signup(props) {
+function Signup() {
 
-const { user , Signup } =props
 
 const [userState, setUserstate] = useState({})
 
-console.log(user);
+console.log(userState);
 
 
+ const URL = "http://localhost:80/api/users/register-user" ;
+
+const submit = (event) =>{
+  
+    event.preventDefault();
 
 
+    Axios.post(URL, {
+      username: userState.username,
+      email: userState.email,
+      password: userState.password,
+    }).then((res) => {
+        
+      console.log('respons',res.data);
+
+      window.location="/signin"
+    });
+  };
+  
 
 
 
@@ -53,10 +73,7 @@ console.log(user);
       <form action="index.html"   
 
 
-                    onSubmit={(event) => {
-                    event.preventDefault();
-                    Signup(userState);
-                  }}>
+                    onSubmit={submit}>
 
 
 
@@ -69,12 +86,12 @@ console.log(user);
           <div className="div">
             <input type="text" 
             className="input"
-            placeholder='Username'
+            placeholder='username'
 
 
                 onChange={(event) => {
-                const Username = event.target.value;
-                setUserstate({ ...userState, ...{ Username } });
+                const username = event.target.value;
+                setUserstate({  ...{ username } });
               }}
 
 
@@ -92,8 +109,8 @@ console.log(user);
 
             
             onChange={(event) => {
-              const Email = event.target.value;
-              setUserstate({ ...userState, ...{ Email } });
+              const email = event.target.value;
+              setUserstate({ ...userState, ...{ email } });
             }}
             
             />
@@ -111,8 +128,8 @@ console.log(user);
 
             
             onChange={(event) => {
-              const Password = event.target.value;
-              setUserstate({ ...userState, ...{ Password } });
+              const password = event.target.value;
+              setUserstate({ ...userState, ...{ password } });
             }}
             
             
@@ -131,18 +148,20 @@ console.log(user);
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    user: state,
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     user: state,
+//   };
+// };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    Signup : (userState) => {
-      console.log(userState);
-    },
-  };
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     Signup : (userState) => {
 
-export default connect(mapStateToProps,mapDispatchToProps)(Signup) ;
+// dispatch(RegisterAuthAction(userState))    
+
+// },
+//   };
+// }
+
+export default Signup ;
