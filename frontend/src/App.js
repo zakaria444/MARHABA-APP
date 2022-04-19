@@ -8,6 +8,9 @@ import Signin from './Authenticated/Signin';
 
 import Signup from './Authenticated/Signup';
 
+import Signuplivreur from './Authenticated/Signinlivreur';
+
+
 import Home from './Home/Home';
 
 import Dashbordadmin from './Admin/Dashbordadmin';
@@ -27,6 +30,8 @@ function App() {
 
         <Route path='/signin' element={<Signin/>} />
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/Signup-livreur' element={<Signuplivreur/>} />
+
 
       </Routes>
 
