@@ -4,7 +4,7 @@
 <h3 align="center">I'm a passionate Developper.</h3>
 
 
-## 🙋‍♂️ About Me
+## 🙋‍♂️ About Mee
 
 <!-- - 🔭 I’m currently working on **[NAME](Link to the app)** -->
 

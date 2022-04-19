@@ -1,9 +1,9 @@
-const booking = require('../models/Livreur');
+const command = require('../models/Livreur');
 
-const getbooking = async (req, res) => {
+const getcommand = async (req, res) => {
     try {
-      const bookings = await booking.find().populate('user_id');
-      res.status(200).json({success: true , data: bookings})
+      const commands = await command.find().populate('user_id');
+      res.status(200).json({success: true , data: commands})
     }catch(error){
       res.status(404).json({success: false , data: [], error: error})
     }
@@ -12,7 +12,7 @@ const getbooking = async (req, res) => {
     bookingproprietair,
     bookingClient,
     updatebooking,
-    getbooking,
+    getcommand,
     getdate
     
     };

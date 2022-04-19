@@ -1,0 +1,294 @@
+.dashboradmin{
+    display:flex ;
+    justify-content: space-evenly;
+
+}
+#cards{
+    display: flex;
+    border: solid 1px;
+    background-color: #fbbd38;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+#repas_card {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   gap: 10px;
+   width:50%;
+   
+}
+.image_repas{
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 10px;
+
+}
+.image{
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+}
+/* From uiverse.io by @westitan */
+.button {
+    position: relative;
+    padding: 19px 36px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+    margin-left: 80px;
+    height: 65px;
+    margin-bottom: 10px;
+
+   }
+   
+   .button span {
+    position: relative;
+    color: #fff;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+    
+   }
+   
+   .button .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #2fd69a;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+   }
+   
+   .button .liquid::after,
+   .button .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #fff;
+   }
+   
+   .button .liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+   }
+   
+   .button .liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+   }
+   
+   .button:hover .liquid {
+    top: -120px;
+   }
+   
+   @keyframes animate {
+    0% {
+     transform: translate(-50%, -75%) rotate(0deg);
+    }
+   
+    100% {
+     transform: translate(-50%, -75%) rotate(360deg);
+    }
+   }
+
+   /* From uiverse.io by @e-coders */
+@keyframes ldio-4j5ay0xf86g {
+    0% {
+     opacity: 1
+    }
+   
+    100% {
+     opacity: 0
+    }
+   }
+   
+   .ldio-4j5ay0xf86g div {
+    left: 94px;
+    top: 48px;
+    position: absolute;
+    animation: ldio-4j5ay0xf86g linear 1s infinite;
+    background: #fe718d;
+    width: 12px;
+    height: 24px;
+    border-radius: 6px / 12px;
+    transform-origin: 6px 52px;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.9166666666666666s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -0.8333333333333334s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.75s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.6666666666666666s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.5833333333333334s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.5s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.4166666666666667s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.3333333333333333s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.25s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.16666666666666666s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.08333333333333333s;
+    background: #fe718d;
+   }
+   
+   .ldio-4j5ay0xf86g div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+    background: #fe718d;
+   }
+   
+   .loadingio-spinner-spinner-977el9wwy2v {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+   }
+   
+   .ldio-4j5ay0xf86g {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+   }
+   
+   .ldio-4j5ay0xf86g div {
+    box-sizing: content-box;
+   }
+   .loading{
+       display: flex;
+       justify-content: center;
+   }
+   /* From uiverse.io by @mateusneves */
+button {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 3px;
+    height: 3em;
+    padding: 0 3em;
+    border: none;
+    background-color: #c41b54;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 5px
+   }
+   
+   button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    background: rgb(196,27,84);
+    background: linear-gradient(90deg, rgba(196,27,84,1) 20%, rgba(124,7,46,1) 100%);
+    transition: 0.2s;
+   }
+   
+   button .label {
+    position: relative;
+   }
+   
+   button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    opacity: 0;
+    transition: 0.4s;
+   }
+   
+   button:hover::before {
+    height: 100%;
+   }
+   
+   button:hover .icon {
+    top: 0;
+    opacity: 1;
+   }
+.slice{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.btn-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+height: 70%;
+}

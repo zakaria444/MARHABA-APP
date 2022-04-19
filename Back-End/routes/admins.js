@@ -3,6 +3,7 @@ const router = require("express").Router();
 const {
   creatRepas,
   getRepas,
+  getRepasById,
   updateRepas,
   deletRepas,
 
@@ -20,6 +21,7 @@ const upload = require('../middlewares/upload')
 
 router.post("/add" , upload.single('image_cover'),   creatRepas);
 router.get("/",/*userAuth,  checkRole(['admin']),*/ getRepas);
+router.get("/repasdetail/:repasId", getRepasById);
 router.patch("/:repasId",  updateRepas);
 router.delete("/:repasId",  deletRepas);
 
