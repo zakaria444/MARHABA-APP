@@ -4,6 +4,9 @@ import React, { useState } from 'react'
 
 import Axios from 'axios';
 
+import { Link } from "react-router-dom";
+
+
 // import { connect } from "react-redux"
 
 // import { RegisterAuthAction } from "../redux/actions/AuthAction";
@@ -138,8 +141,12 @@ const submit = (event) =>{
         </div>
        
         <input type="submit" className="btn"  defaultValue="Login" value={"SIGN UP"}/>
+        <h3>if you are livreur</h3>
+        <Link to={`/signup-livreur`}>
+        <input type="text" className="btn" id='Signup-Livreur' value={"Signup Livreur"} />
+        </Link>
       </form>
-      
+
     </div>
   </div>
 </div>
