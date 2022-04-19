@@ -12,8 +12,6 @@ function NavigationBar() {
     if(jwt){
       
       const JWT1 =jwtdecode(jwt);
-
-
       
       return   JWT1;
      
@@ -21,13 +19,23 @@ function NavigationBar() {
     }
      return false;
   }
+  const signout =  () =>{
+    const jwt =  localStorage.removeItem('token');
+   
+    window.location="/";
+    return jwt;
+  
+  
+  }
  
 
   return (
    
 <div>
   <header>
-    <nav>
+  {!isAuthenticated() && (
+          <>
+         <nav>
       <ul className="nav-links">
         <li><a href="http://localhost:3000">Home</a></li>
        
@@ -38,6 +46,34 @@ function NavigationBar() {
     <a className="cta" href="http://localhost:3000/signup"><button className='Signin'>SignUp</button></a>
 
     </div>
+
+         
+        </>
+
+    )}
+    {isAuthenticated() && (
+          <>
+         <nav>
+      <ul className="nav-links">
+        <li><a href="http://localhost:3000">Home</a></li>
+       
+      </ul>
+    </nav>
+    <div className='nav-login'>
+    <a className="cta" ><button className='Signin'>WELCOME :{ isAuthenticated().username }</button></a>
+    <a className="cta" ><button className='Signin'>Role :{ isAuthenticated().role }</button></a>
+
+    <a className="cta" onClick={signout} ><button className='Signin'>Sign out</button></a>
+  
+
+    </div>
+
+         
+        </>
+
+    )}
+
+   
     </header>
     <a className="cta" href="#"></a>
     
