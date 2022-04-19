@@ -9,19 +9,19 @@ const AuthActionType = {
   LOGIN_FAIL: "LOGIN_FAIL",
 };
 
-const RegisterAuthAction = (userState, history, setErrorHandler) => {
+const RegisterAuthAction = (userState, setErrorHandler) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post("/register", userState);
+      const res = await axios.post("/register-user", userState);
       const { data } = res;
       dispatch({ type: AuthActionType.REGISTER_SUCCESS, payload: data });
-      history.push("/");
     } catch (error) {
       if (error.response) {
         dispatch({
           type: AuthActionType.REGISTER_FAIL,
           payload: error.response.data.message,
         });
+        
         setErrorHandler({
           hasError: true,
           message: error.response.data.message,
