@@ -13,6 +13,15 @@ export const repasReducer = (state = intialState, { type, payload }) => {
   }
 };
 
+export const commandReducer = (state = intialState, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SET_COMMAND:
+      return { ...state, Command: payload };
+    default:
+      return state;
+  }
+};
+
 export const selectedRepasReducer = (state = {}, { type, payload }) => {
   console.log(type);
   switch (type) {
