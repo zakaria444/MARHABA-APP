@@ -4,6 +4,9 @@ import { repasReducer, selectedRepasReducer } from "./productsReducer";
 
 import  authreducer  from "./authreducer"
 
+import  CommandReducer  from "./commandreducer"
+
+
 const reducers = combineReducers({
 
   allRepas: repasReducer,
@@ -11,6 +14,8 @@ const reducers = combineReducers({
   repas: selectedRepasReducer,
 
   authState:   authreducer,
+
+  commandReducer: CommandReducer,
 
 });
 
