@@ -60,10 +60,10 @@ function NavigationBar() {
       </ul>
     </nav>
     <div className='nav-login'>
-    <a className="cta" ><button className='Signin'>WELCOME :{ isAuthenticated().username }</button></a>
-    <a className="cta" ><button className='Signin'>Role :{ isAuthenticated().role }</button></a>
+    <a className="" ><button className='Signin'>WELCOME :{ isAuthenticated().username }</button></a>
+    <a className="" ><button className='Signin'>Role :{ isAuthenticated().role }</button></a>
 
-    <a className="cta" onClick={signout} ><button className='Signin'>Sign out</button></a>
+    <a className="" onClick={signout} ><button className='Signin'>Sign out</button></a>
   
 
     </div>
