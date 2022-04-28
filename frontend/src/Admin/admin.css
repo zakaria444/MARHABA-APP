@@ -16,8 +16,17 @@
    display: grid;
    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
    gap: 10px;
-   width:50%;
+   width: 60%;
    
+}
+.card{
+    background-color: #fbbd38;
+}
+.comm{
+    width: 1500px;
+}
+.pending{
+    text-align: center;
 }
 .image_repas{
     width: 250px;
