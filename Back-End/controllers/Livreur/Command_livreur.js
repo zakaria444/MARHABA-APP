@@ -29,8 +29,12 @@ const show_command = async (req, res) => {
 const order_delivery = async (req, res) => {
   const id_command = req.params.command_id;
   const id_livreur = req.body.livreur_id;
+
+  console.log('id_livreur',id_livreur);
+  console.log('id_command',id_command);
+
   const command_id = await Command.find({ _id: id_command });
-  if (command_id.livreur_id === null) {
+  if (command_id[0].livreur_id === null) {
     try {
       await Command.updateOne(
         { _id: id_command },
