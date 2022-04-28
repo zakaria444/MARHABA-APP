@@ -3,7 +3,15 @@ import { ActionTypes } from "../constants/action-types";
 export const setRepas = (repas) => {
   return {
     type: ActionTypes.SET_REPAS,
+
     payload: repas,
+  };
+};
+export const setcommand = (command) => {
+  return {
+    type: ActionTypes.SET_COMMAND,
+
+    payload: command,
   };
 };
 
