@@ -6,6 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { setRepas } from "../redux/actions/repasActions";
 
+import Command from "../Livreur/Commande";
+
+import Livreur from "./livreur";
+
+
 
 
 
@@ -19,6 +24,9 @@ function Dashbordadmin() {
 
   const [file, setFiles] = useState("");
 
+  const [livreurs, setlivreur] = useState([]);
+
+
 
   const AllReapas = useSelector((state) => state);
 
@@ -29,6 +37,8 @@ function Dashbordadmin() {
   const url = "http://localhost:80/api/admin";
 
   const urladdreapas = "http://localhost:80/api/admin/add";
+
+  const url_livreur ="http://localhost:80/api/admin/getLivreur";
 
 
   const repas = async () => {
@@ -78,6 +88,21 @@ function Dashbordadmin() {
     });
   };
 
+  const livreur = async()=>{
+
+   await axios
+      .get(url_livreur)
+      .then((res) => {
+        console.log("livreur response", res.data.data);
+        const toutlivreur=res.data.data;
+        setlivreur(toutlivreur)
+        console.log('state liverur',livreurs);
+      });
+
+      
+
+  }
+
   const handle = (event) => {
 
   
@@ -119,18 +144,62 @@ function Dashbordadmin() {
   </span>
   {/* </Link> */}
 </button>
-<button >
+
+
+<button type="button" class="" data-toggle="modal" data-target="#exampleModalCenter">
   <span  class="label">🛎️Afficher Command</span>
   <span class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
   </span>
 </button>
-<button>
+
+ 
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      
+      </div>
+     
+      <div id="repas_card">
+          <Command/>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<button type="button" onClick={() => livreur()} class="" data-toggle="modal" data-target="#exampleModalCenter1">
   <span class="label">⌛Accepté livreur</span>
   <span class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
   </span>
 </button>
+
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+  
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <Livreur/>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div>
   {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> */}
   <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
