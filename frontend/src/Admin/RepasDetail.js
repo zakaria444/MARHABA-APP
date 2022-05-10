@@ -23,12 +23,12 @@
 
         const dispatch = useDispatch();
 
-        const handleAddToCart = async () => {
+        const handleAddToCart =   () => {
 
 
           // console.log('hellozaaria',repas);
 
-          await dispatch(addToCart(repas));
+          dispatch(addToCart(repas));
         };
 
         console.log(repasId);
