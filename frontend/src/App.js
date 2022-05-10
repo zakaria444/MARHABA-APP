@@ -21,6 +21,8 @@ import CommandeDetaile from './Livreur/CommandeDetaile';
 
 import Dashbordlivreur from './Livreur/Dashbordlivreur';
 
+import CommandeSelect from './Livreur/CommandeSelect'
+
 
 
 function App() {
@@ -57,6 +59,8 @@ function App() {
 
       <Route path='/dashbordlivreur' element={<Dashbordlivreur/>} />
       <Route path='/commanddetail/:command_id' element={<CommandeDetaile/>} />
+      <Route path='/commandselect/:user_id' element={<CommandeSelect/>} />
+
 
 
 
