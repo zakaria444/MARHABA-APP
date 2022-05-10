@@ -5,10 +5,13 @@ const {
   order_delivery,
   status_command,
   show_command_repas,
-  show_command
+  show_command,
+  order_delivery_id
   } = require("../controllers/Livreur/Command_livreur");
 
-
+  router.get('/order_delivery_id/:user_id', async(req,res)=>{
+    await   order_delivery_id(req,res);
+  });
 
   router.post('/order_delivery/:command_id', async(req,res)=>{
     await order_delivery(req,res);
