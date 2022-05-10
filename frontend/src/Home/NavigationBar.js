@@ -37,7 +37,7 @@ function NavigationBar() {
           <>
          <nav>
       <ul className="nav-links">
-        <li><a href="http://localhost:3000">Home</a></li>
+        <a  href="http://localhost:3000">Home</a>
        
       </ul>
     </nav>
@@ -55,7 +55,7 @@ function NavigationBar() {
           <>
          <nav>
       <ul className="nav-links">
-        <li><a href="http://localhost:3000">Home</a></li>
+      <a href="http://localhost:3000">Home</a>
        
       </ul>
     </nav>
