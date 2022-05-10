@@ -17,7 +17,7 @@ const show_command_repas = async (req, res) => {
 
 const show_command = async (req, res) => {
   try {
-    const command = await Command.find().populate("user_id");
+    const command = await Command.find().populate("user_id").populate("livreur_id");
 
     res.status(200).json({ success: true, data: command });
   } catch (error) {
@@ -59,6 +59,20 @@ const order_delivery = async (req, res) => {
         error: "c'est command deja reserv par autre livreur",
       });
   }
+};
+
+const order_delivery_id = async (req, res) => {
+  const id_livreur = req.params.user_id;
+
+  console.log('id_livreur',id_livreur);
+
+  try {
+    const order_delivery_id = await Command.find({ livreur_id: id_livreur });
+    res.status(200).json({ success: true, data: order_delivery_id });
+  } catch (error) {
+    res.status(404).json({ success: false, data: [], error: error });
+  }
+
 };
 
 const status_command = async (req, res) => {
@@ -151,4 +165,5 @@ module.exports = {
   show_command,
   order_delivery,
   status_command,
+  order_delivery_id,
 };
