@@ -1,17 +1,8 @@
 import { ActionTypes } from "../constants/action-types";
 const intialState = {
-  repas: [],
+  Command: [],
 };
 
-
-export const repasReducer = (state = intialState, { type, payload }) => {
-  switch (type) {
-    case ActionTypes.SET_REPAS:
-      return { ...state, repas: payload };
-    default:
-      return state;
-  }
-};
 
 export const commandReducer = (state = intialState, { type, payload }) => {
   switch (type) {
@@ -22,14 +13,15 @@ export const commandReducer = (state = intialState, { type, payload }) => {
   }
 };
 
-export const selectedRepasReducer = (state = {}, { type, payload }) => {
+export const selectedCommandReducer = (state = {}, { type, payload }) => {
   console.log(type);
   switch (type) {
-    case ActionTypes.SELECTED_REPAS:
+    case ActionTypes.SELECTED_COMMAND:
       return { ...state, ...payload };
-    case ActionTypes.REMOVE_SELECTED_REPAS:
+    case ActionTypes.REMOVE_SELECTED_COMMAND:
       return {};
     default:
       return state;
   }
 };
+export default commandReducer;

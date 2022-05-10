@@ -9,10 +9,5 @@ const getcommand = async (req, res) => {
     }
   }
   module.exports = {
-    bookingproprietair,
-    bookingClient,
-    updatebooking,
-    getcommand,
-    getdate
-    
+  getcommand,    
     };

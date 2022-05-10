@@ -17,6 +17,12 @@ import Dashbordadmin from './Admin/Dashbordadmin';
 
 import RepasDetail from './Admin/RepasDetail';
 
+import CommandeDetaile from './Livreur/CommandeDetaile';
+
+import Dashbordlivreur from './Livreur/Dashbordlivreur';
+
+import CommandeSelect from './Livreur/CommandeSelect'
+
 
 
 function App() {
@@ -45,6 +51,18 @@ function App() {
 
       <Route path='/dashbordadmin' element={<Dashbordadmin/>} />
       <Route path='/repasdetail/:repasId' element={<RepasDetail/>} />
+
+
+      </Routes>
+
+      <Routes>
+
+      <Route path='/dashbordlivreur' element={<Dashbordlivreur/>} />
+      <Route path='/commanddetail/:command_id' element={<CommandeDetaile/>} />
+      <Route path='/commandselect/:user_id' element={<CommandeSelect/>} />
+
+
+
 
 
       </Routes>

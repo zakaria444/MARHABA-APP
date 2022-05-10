@@ -37,7 +37,7 @@ function NavigationBar() {
           <>
          <nav>
       <ul className="nav-links">
-        <li><a href="http://localhost:3000">Home</a></li>
+        <a  href="http://localhost:3000">Home</a>
        
       </ul>
     </nav>
@@ -55,15 +55,15 @@ function NavigationBar() {
           <>
          <nav>
       <ul className="nav-links">
-        <li><a href="http://localhost:3000">Home</a></li>
+      <a href="http://localhost:3000">Home</a>
        
       </ul>
     </nav>
     <div className='nav-login'>
-    <a className="cta" ><button className='Signin'>WELCOME :{ isAuthenticated().username }</button></a>
-    <a className="cta" ><button className='Signin'>Role :{ isAuthenticated().role }</button></a>
+    <a className="" ><button className='Signin'>WELCOME :{ isAuthenticated().username }</button></a>
+    <a className="" ><button className='Signin'>Role :{ isAuthenticated().role }</button></a>
 
-    <a className="cta" onClick={signout} ><button className='Signin'>Sign out</button></a>
+    <a className="" onClick={signout} ><button className='Signin'>Sign out</button></a>
   
 
     </div>
