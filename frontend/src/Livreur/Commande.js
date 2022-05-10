@@ -104,6 +104,8 @@ const Commande = () => {
                 <div className="image"><h3>Total  :</h3>$ {total}</div>
 
                 <div className="image"><h3>Name  :</h3>{user_id.username}</div>
+                <div className="image"><h3>Name Livreur  :</h3>Nothing</div>
+
               </div>
             </div>
           </div>
@@ -137,7 +139,9 @@ else{
               <div className="image"><h3>Status  :</h3>{status}</div>
               <div className="image"><h3>Total  :</h3>$ {total}</div>
 
-              <div className="image"><h3>Name  :</h3>{user_id.username}</div>
+              <div className="image"><h3>Name Client  :</h3>{user_id.username}</div>
+              <div className="image"><h3>Name Livreur  :</h3>{livreur_id.username}</div>
+
             </div>
           </div>
         </div>
