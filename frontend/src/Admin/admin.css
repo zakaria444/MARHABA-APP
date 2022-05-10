@@ -301,3 +301,75 @@ button {
     justify-content: space-between;
 height: 70%;
 }
+
+.penTitle {
+    font-family: Lato ;
+    font-size: 2vw ;
+    font-weight: bold ;
+    color: #222 ;
+    text-shadow: -1px -1px 2px #666,
+      1px 1px 2px #aaa ;
+    margin: 2em auto ;
+    text-align: center ;
+  }
+  
+  .timeline {
+    display: block ;
+    width: 430px ;
+    background-color: rgba(0, 0, 0, .5) ;
+    border-radius: 5px ;
+    margin: 100px auto ;
+    counter-reset: step ;
+  }
+  
+  .timeline::after {
+    content: "" ;
+    display: block ;
+    clear: both ;
+  }
+.homenab{
+    color: #222;
+}
+  
+  li {
+    float: left ;
+    width: 10px ;
+    height: 10px ;
+    margin-right: 200px ;
+    background-color: #f80 ;
+    border-radius: 5px ;
+    font-size: 1rem ;
+    text-align: center ;
+    line-height: 10px ;
+    text-indent: -9999px ;
+    position: relative ;
+  }
+  
+  li::after {
+    text-indent: 0 ;
+    display: block ;
+    counter-increment: step ;
+    content:"STEP "  ;
+    width: 100px ;
+    height: 100px ;
+    background-color: #f80 ;
+    color: #fff ;
+    line-height: 100px ;
+    position: absolute ;
+    top: -45px ;
+    left: -45px ;
+    border-radius: 50% ;  
+    -webkit-transition: .2s ease-in 0s ;
+    transition: .2s ease-in 0s ;
+  }
+  
+  li:last-child {
+    margin-right: 0 ;
+  }
+  
+  li:hover::after {
+    transform: scale(1.2) ;
+  }
+  .acc{
+    border: solid ;
+  }
