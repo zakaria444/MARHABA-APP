@@ -6,6 +6,8 @@ import  authreducer  from "./authreducer"
 
 import  CommandReducer  from "./commandreducer"
 
+import cartReducer from "./cartReducers";
+
 
 const reducers = combineReducers({
 
@@ -16,6 +18,9 @@ const reducers = combineReducers({
   authState:   authreducer,
 
   commandReducer: CommandReducer,
+
+  cart: cartReducer,
+
 
 });
 
