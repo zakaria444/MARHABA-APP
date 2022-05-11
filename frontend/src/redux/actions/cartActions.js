@@ -3,7 +3,7 @@ import { ADD_TO_CART, DELETE_FROM_CART } from '../constants/cartConstants';
 export const addToCart = (repas) =>  async  dispatch => {
 
 	// if cart already exists in local storage, use it, otherwise set to empty array
-const cart = await localStorage.getItem('cart')
+const cart =  localStorage.getItem('cart')
 		?  JSON.parse(localStorage.getItem('cart'))
 		: [];
 

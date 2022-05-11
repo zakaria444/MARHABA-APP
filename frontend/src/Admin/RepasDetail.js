@@ -23,7 +23,7 @@
 
         const dispatch = useDispatch();
 
-        const handleAddToCart =   () => {
+        const handleAddToCart = async  () => {
 
 
           // console.log('hellozaaria',repas);
